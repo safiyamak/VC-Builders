@@ -24,5 +24,5 @@ Make sure you have the following installed:
 3. Run main.py
 
 ```bash
-git clone https://github.com/your-username/ai-circular-economy-model.git
-cd ai-circular-economy-model
+git clone https://github.com/safiyamak/AIHackathon/tree/main
+cd AIHackathon
