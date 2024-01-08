@@ -15,9 +15,13 @@ Make sure you have the following installed:
 1. pip install python-dotenv
 2. pip install openai
 3. pip install pandas
+4. pip install matplotlib
+5. pip install os
 ### Installation
 
-1. Clone this repository:
+1. Clone this repository
+2. Put your OpenAI API key into the .env file.
+3. Run main.py
 
 ```bash
 git clone https://github.com/your-username/ai-circular-economy-model.git
