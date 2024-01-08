@@ -26,7 +26,4 @@ def visualize_scores(train_scores, test_scores):
     plt.xticks(positions, labels, rotation=45, ha='right')
     plt.legend()    # Show the plot
     plt.tight_layout()
-    plt.show()# Example usage:
-train_scores = [90,80,70,60,20, 100, 200, 66, 82, 84]
-test_scores = [90,80,70,60,20, 100,70,60,20,80]
-visualize_scores(train_scores, test_scores)
+    plt.show()

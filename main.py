@@ -35,21 +35,21 @@ def main():
     user_solution = input("Enter your solution plan: ")
 
     # Analyze user's problem and solution using OpenAI GPT
+    
     user_response = openai_gpt_call(user_problem, user_solution, prompt)
-
+    scores = []
     # Calculate the average score of each metric
     for i in range(9):
-        average_score += user_response[i]
+        scores.append(int(user_response[i]))
     
-    average_score = average_score/ len(user_response)
-    
+    user_category = user_response[10]
     matching_rows = df[df['category'] == user_category]
 
     # Find the 5 highest average scores
-    top_5_scores = matching_rows.nlargest(5, 'average score')['average score'].tolist()
+    top_10_scores = matching_rows.nlargest(10, 'average score')['average score'].tolist()
 
     # Visualization 1: Use the average score 5 times
-    visualize_scores([average_score]*10, top_5_scores)
+    visualize_scores(scores, top_10_scores)
 
     # Instruct the user to press x to see the next visualization
     input("Press 'x' to see the next visualization...")
