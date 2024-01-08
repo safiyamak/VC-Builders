@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 def main():
     load_dotenv()
-    csv_file_path = os.getenv("CSV_FILE_PATH")
+    csv_file_path = "AIEarthHackDataset.csv"
 
     prompt = (
         "You are a taking on the role of a venture capitalist assistant who specializes in circular economy businesses."
@@ -38,7 +38,7 @@ def main():
     user_response = openai_gpt_call(user_problem, user_solution, prompt)
 
     # Calculate the average score of each metric
-    for i in range(10):
+    for i in range(9):
         average_score += user_response[i]
     
     average_score = average_score/ len(user_response)
